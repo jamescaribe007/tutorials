@@ -1,0 +1,138 @@
+Docker
+- Create a docker file
+- Build the docker file to create an image
+- Veify image
+- Inspect image
+- Push image to repository
+- Run image
+- Pull image
+- Check status with [docker ps]
+
+
+Docker Components
+Docker components include
+
+Docker daemon
+
+Docker client
+
+Docker Objects
+
+Images
+
+Containers / Services
+
+Network
+
+Volumes
+
+Docker Registry
+
+********** Docker Basic Commands **********
+[ Check the version of Docker ]
+docker version
+
+[ Check the detailed information on the running/stopped containers ]
+docker info
+
+[ Pull an image from docker hub (latest version by default) ]
+docker pull $mage_name
+[ Pull specific version of an image from docker hub  ]
+docker pull $image_name:$version
+
+[  Verify the downloaded docker images ]
+docker images
+
+[ Remove Docker Image ]
+docker rmi $image_name 
+
+[ Check actions on image ]
+docker history $image_name
+
+[ Pull and run image ]
+docker run $image_name
+
+[ Run image with an specific service in background ]
+docker run --name $service_name -d $image_name
+
+[ Search image ]
+docker search $image_name
+docker search $image_name | head -$n
+
+[ List running containers ]
+docker ps
+[ List running/stopped containers ]
+docker ps -a 
+
+[ Know the IP address of the running container ]
+docker inspect $container/service_name
+
+[ Stats for a running Container ]
+docker stats $container|service_name
+
+[ Pause/Unpause the processes in a running container ]
+docker pause $container/service_name_name
+docker unpause $container/service_name_name
+
+[ Start/Stop/Kill the same container ]
+docker start $container|service_name_name or $id
+docker stop $container|service_name_name or $id
+docker kill $container|service_name_name or $id
+ 
+[ Delete a container ]
+docker rm $container|service_name_name or $id
+
+[ Remove all stopped containers ]
+docker container prune
+
+[ Export a container ]
+docker export $container_name $file_name.tar
+
+[ Import a container ]
+docker import $remote_url/name $file_name.tar
+
+[ Stop/Start Docker daemon process (access root required)]
+service docker stop
+service docker start  
+
+[ Check the running status of docker ]
+service docker status
+
+[ Restart Docker service in your system ]
+service docker restart
+
+
+********** Docker Installation **********
+Prerequisite for installation of Docker on Linux are:
+
+64-bit architecture Linux
+Linux kernel must be 3.10 or later
+
+Here are the steps for installing the community edition in Ubuntu 16.04:
+
+Add the GPG key for the official Docker repository to the system:
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+Now add the Docker repository to APT sources:
+$ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+Now update the package database with the Docker packages:
+$ sudo apt-get update
+
+Check for the policy:
+$ apt-cache policy docker-ce
+
+Install Docker:
+$ sudo apt-get install -y docker-ce
+
+Check the installed version of Docker:
+$ sudo docker --version
+
+Installation Using Automated Script
+Are you feeling this procedure lengthy? There is a shortcut to this process.
+Just run the below command to install Docker
+curl command
+$ sudo curl -sSL https://get.docker.io/ | sh
+
+********** Uninstall Docker CE **********
+This command is used to uninstall Docker CE package in Ubuntu machine.
+$ sudo apt-get purge docker-ce

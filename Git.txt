@@ -1,0 +1,38 @@
+git --help
+git init
+git status
+git add $File
+git add .
+git commit
+git commit -m "$message"
+git config --global user.email "$you@example.com"
+git config --global user.name "$UserName"
+git log
+git checkout -- $File
+git checkout $BranchName
+git diff $File
+git branch
+got branch $BranchName
+git branch -M main
+git remote add origin git@github.com:jamescaribe007/$RepositoryName.git
+git remote add origin https://github.com/jamescaribe007/project_git.git
+git remote set-url origin https://github.com/jamescaribe007/project_git.git
+git push -u origin $BranchName
+git clone $URL
+
+
+git clone https://github.com/adantop/todos-frontend
+
+
+Forwarder or Forwarders
+
+sourcetypes or sourcetype
+
+If git defined
+cd $git_path
+git status
+git add $File
+git add .
+git commit -m "$message"
+Doubt about his ->> git remote set-url origin https://github.com/jamescaribe007/project_git.git
+git push -u origin $BranchName
