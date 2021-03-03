@@ -133,6 +133,9 @@ Just run the below command to install Docker
 curl command
 $ sudo curl -sSL https://get.docker.io/ | sh
 
+********** Docker Installation for linux MX **********
+https://mxlinux.org/wiki/applications/docker/
+
 ********** Uninstall Docker CE **********
 This command is used to uninstall Docker CE package in Ubuntu machine.
 $ sudo apt-get purge docker-ce
