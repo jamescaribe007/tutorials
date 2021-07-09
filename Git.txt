@@ -1,38 +1,44 @@
 git --help
 git init
 git status
-git add $File
+git add $filename
 git add .
 git commit
 git commit -m "$message"
 git config --global user.email "$you@example.com"
 git config --global user.name "$UserName"
+git config --list
 git log
-git checkout -- $File
-git checkout $BranchName
-git diff $File
+
+git checkout -- $filename
+git checkout -b $branchName
+git checkout $branchName
+git diff $filename
 git branch
-got branch $BranchName
+git branch $branchName
 git branch -M main
+git branch -a
+git branch --merged
+git merge $branchName
+git branch -d $branchName
+git push origin --delete $branchName
+
 git remote add origin git@github.com:jamescaribe007/$RepositoryName.git
 git remote add origin https://github.com/jamescaribe007/project_git.git
 git remote set-url origin https://github.com/jamescaribe007/project_git.git
-git push -u origin $BranchName
+git push -u origin $branchName
+
 git clone $URL
-
-
 git clone https://github.com/adantop/todos-frontend
 
-
-Forwarder or Forwarders
-
-sourcetypes or sourcetype
+git reset $filename
+git reset
 
 If git defined
 cd $git_path
 git status
-git add $File
+git add $filename
 git add .
 git commit -m "$message"
-Doubt about his ->> git remote set-url origin https://github.com/jamescaribe007/project_git.git
+Doubt about this ->> git remote set-url origin https://github.com/jamescaribe007/project_git.git
 git push -u origin $BranchName
